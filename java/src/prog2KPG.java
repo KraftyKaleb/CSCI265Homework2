@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+/*
+ *
+ */
 public class prog2KPG {
     public static void main(String[] args) {
         boolean done = false;
@@ -22,7 +25,9 @@ public class prog2KPG {
             if (major.equalsIgnoreCase("done")) done = true;
             else if (major.equalsIgnoreCase("cs")) {
                 csMajors++;
-                String minor = scanner.next();
+
+                System.out.print("Enter minor: ");
+                String minor = scanner.nextLine();
                 if (minor.equalsIgnoreCase("data")) dataMinors++;
                 else if (minor.equalsIgnoreCase("cyber")) cyberMinors++;
                 else if (minor.equalsIgnoreCase("math")) mathMinors++;
@@ -35,21 +40,30 @@ public class prog2KPG {
             System.out.println();
         }
 
-        totalMajors=csMajors+dataMajors+dataMajors;
-        System.out.println("Total number of students" + totalMajors);
+        totalMajors=csMajors+dataMajors+dataMajors+otherMajors;
+
+        double csMajorPercent = ((double) csMajors/totalMajors)*100;
+        double dataMajorPercent = ((double) dataMajors/totalMajors)*100;
+        double cyberMajorPercent = ((double) cyberMajors/totalMajors)*100;
+        double otherMajorPercent = ((double) otherMajors/totalMajors)*100;
+
+        double dataMinorPercent = ((double) dataMinors/csMajors)*100;
+        double cyberMinorPercent = ((double) cyberMinors/csMajors)*100;
+        double mathMinorPercent = ((double) mathMinors/csMajors)*100;
+        double otherMinorPercent = ((double) otherMinors/csMajors)*100;
+
+        System.out.println("Total number of students: " + totalMajors);
 
         System.out.println("Majors of students in CS160");
-        System.out.println("Computer Science     " + csMajors);
-        System.out.println("Data Science         " + dataMajors);
-        System.out.println("Cyber Security       " + cyberMajors);
-        System.out.println("Other Majors         " + otherMajors);
-        System.out.println();
+        System.out.format("%-20s %3s %10.2f\n", "Computer Science", csMajors, csMajorPercent);
+        System.out.format("%-20s %3s %10.2f\n", "Data Science", dataMajors, dataMajorPercent);
+        System.out.format("%-20s %3s %10.2f\n", "Cyber Security", cyberMajors, cyberMajorPercent);
+        System.out.format("%-20s %3s %10.2f\n\n", "Other Majors", otherMajors, otherMajorPercent);
 
         System.out.println("Minors for Computer Science Majors in CS160");
-        System.out.println("Data Science         " + dataMinors);
-        System.out.println("Cyber Security       " + cyberMinors);
-        System.out.println("Mathematics          " + mathMinors);
-        System.out.println("Other Majors         " + otherMinors);
-
+        System.out.format("%-20s %3s %10.2f\n", "Data Science", dataMinors, dataMinorPercent);
+        System.out.format("%-20s %3s %10.2f\n", "Cyber Security", cyberMinors, cyberMinorPercent);
+        System.out.format("%-20s %3s %10.2f\n", "Mathematics", mathMinors, mathMinorPercent);
+        System.out.format("%-20s %3s %10.2f\n", "Other Minors", otherMinors, otherMinorPercent);
     }
 }
