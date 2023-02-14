@@ -1,6 +1,8 @@
-//
-// Created by kaleb.gilson on 2/14/2023.
-//
+/*
+ * C++ portion of Project2
+ * CSCI 265
+ * Kaleb Gilson - kaleb.gilson@und.edu - 2/14/23
+ */
 #include <iostream>
 #include <iomanip>
 
