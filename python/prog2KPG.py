@@ -1,7 +1,8 @@
 #
+# Python portion of Project2
+# CSCI 265
+# Kaleb Gilson - kaleb.gilson@und.edu - 2/14/23
 #
-#
-
 done = 0
 
 csMajors = 0
