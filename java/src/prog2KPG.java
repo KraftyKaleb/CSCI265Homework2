@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 /*
  *
+ * Java portion of Project2
+ * CSCI 265
+ * Kaleb Gilson - kaleb.gilson@und.edu - 2/9/23
  */
 public class prog2KPG {
     public static void main(String[] args) {
